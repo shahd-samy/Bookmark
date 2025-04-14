@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="icon" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="container">
+
+            <h1 class="mx-auto">Bookmarker</h1>
+
+            <h2 class="mx-auto">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+
+
+
+            <form class="mt-5 d-flex flex-column align-items-center w-100" autocomplete="off">
+
+
+                <div class="mb-3 w-90 z-1">
+
+                    <i class="fa-solid fa-book"></i>
+                    <label for="SiteName" class="form-label ms-1">Site Name</label>
+                    <input type="text" class="form-control" id="SiteName" placeholder="Bookmark Name" oninput="errorname()">
+
+                </div>
+
+
+                <div class="mb-3 w-90 z-1">
+                    
+                    <i class="fa-solid fa-link"></i>
+                    <label for="SiteURL" class="form-label ms-1">Site URL</label>
+                    <input type="url" class="form-control" id="SiteURL" placeholder="Website URL" oninput="errorurl()">
+
+                </div>
+
+                <button type="button" class="btn btn-danger px-5 mb-5 z-1" onclick="addsite()">Submit</button>
+
+            </form>
+
+
+
+
+            <table class="table text-center">
+
+
+                <thead>
+                    <tr>
+                        <th scope="col">index</th>
+                        <th scope="col">Website Name</th>
+                        <th scope="col">Visit</th>
+                        <th scope="col">Delete</th>
+
+                    </tr>
+                </thead>
+
+
+                <tbody id="sites"></tbody>
+
+
+            </table>
+
+            
+
+        </div>
+        
+    </main>
+
+
+
+
+
+
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
